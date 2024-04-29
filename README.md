@@ -25,14 +25,14 @@ Simple guide to apply the patch:<br>
     $ mkdir ~/myqemu && cd ~/myqemu
     $ git clone https://github.com/kjliew/qemu-3dfx.git
     $ cd qemu-3dfx
-    $ wget https://download.qemu.org/qemu-8.2.1.tar.xz
-    $ tar xf qemu-8.2.1.tar.xz
-    $ cd qemu-8.2.1
+    $ wget https://download.qemu.org/qemu-8.2.3.tar.xz
+    $ tar xf qemu-8.2.3.tar.xz
+    $ cd qemu-8.2.3
     $ rsync -r ../qemu-0/hw/3dfx ../qemu-1/hw/mesa ./hw/
     $ patch -p0 -i ../00-qemu82x-mesa-glide.patch
     $ bash ../scripts/sign_commit
     $ mkdir ../build && cd ../build
-    $ ../qemu-8.2.1/configure && make
+    $ ../qemu-8.2.3/configure && make
 
 ## Building Guest Wrappers
 **Requirements:**

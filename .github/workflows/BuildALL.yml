@@ -121,9 +121,9 @@ jobs:
           $env:CCACHE_MAXSIZE = "500M"
           $env:CCACHE_DEPEND = 1 # cache misses are too expensive with preprocessor mode
           $env:CC = "ccache gcc"
-          D:\a\qemu-3dfx\qemu-3dfx\msys64\usr\bin\bash -lc "wget --no-check-certificate https://download.qemu.org/qemu-8.2.1.tar.xz"
-          D:\a\qemu-3dfx\qemu-3dfx\msys64\usr\bin\bash -lc "tar xfv qemu-8.2.1.tar.xz"
-          cd qemu-8.2.1
+          D:\a\qemu-3dfx\qemu-3dfx\msys64\usr\bin\bash -lc "wget --no-check-certificate https://download.qemu.org/qemu-8.2.3.tar.xz"
+          D:\a\qemu-3dfx\qemu-3dfx\msys64\usr\bin\bash -lc "tar xfv qemu-8.2.3.tar.xz"
+          cd qemu-8.2.3
           D:\a\qemu-3dfx\qemu-3dfx\msys64\usr\bin\bash -lc "rsync -r ../qemu-0/hw/3dfx ./hw/"
           D:\a\qemu-3dfx\qemu-3dfx\msys64\usr\bin\bash -lc "rsync -r ../qemu-1/hw/mesa ./hw/"
           D:\a\qemu-3dfx\qemu-3dfx\msys64\usr\bin\bash -lc "patch -p0 -i ../00-qemu82x-mesa-glide.patch"
@@ -143,6 +143,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          file: D:\a\qemu-3dfx\qemu-3dfx\qemu-8.2.1\qemu64.tar.gz
+          file: D:\a\qemu-3dfx\qemu-3dfx\qemu-8.2.3\qemu64.tar.gz
           draft: false
 
